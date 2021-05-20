@@ -53,13 +53,13 @@ void bfs(int i, int j, vector<vector<Node>>& v)
 
 		if (v[f.x][f.y+1].value == 0 && v[f.x + 1][f.y].used == false)
 		{
-			q.push(Node(f.x + 1, f.y));
+			q.push(Node(f.x, f.y+1));
 			v[f.x][f.y + 1].used = true;
 		}
 
 		if(v[f.x][f.y-1].value==0 && v[f.x][f.y-1].used==false)
 		{
-			q.push(Node(f.x - 1, f.y));
+			q.push(Node(f.x , f.y-1));
 			v[f.x][f.y - 1].used = true;
 		}
 
